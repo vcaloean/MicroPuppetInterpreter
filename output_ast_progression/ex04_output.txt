@@ -1,0 +1,22 @@
+program_elements
+   puppet_node - default
+      statements
+         defined_res_decl - realize
+   statements
+      defined_res_decl - User
+         alice
+      resource
+         alice
+         attribute - uid
+            100
+====================
+moving the default node to the end
+program_elements
+   statements
+      defined_res_decl - User
+         alice
+      resource
+         alice
+         attribute - uid
+            100
+====================

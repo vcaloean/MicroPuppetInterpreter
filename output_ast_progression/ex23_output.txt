@@ -1,0 +1,45 @@
+program_elements
+   puppet_node - default
+      statements
+         class_decl
+            attribute - variable
+               12345
+   class_def - a
+      parameter
+         local_variable - variable
+      statements
+         resource
+            alice
+            attribute - password
+               local_variable - variable
+====================
+moving the default node to the end
+program_elements
+   class_def - a
+      parameter
+         local_variable - variable
+      statements
+         resource
+            alice
+            attribute - password
+               local_variable - variable
+====================
+program_elements
+   skip
+====================
+program_elements
+====================
+program_elements
+   puppet_node - default
+      statements
+         class_decl
+            attribute - variable
+               12345
+====================
+program_elements
+   scope - ::default
+      statements
+         class_decl
+            attribute - variable
+               12345
+====================

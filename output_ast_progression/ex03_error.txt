@@ -1,0 +1,9 @@
+line 14:1 missing '}' at 'File'
+line 14:7 token recognition error at: '|'
+line 14:6 mismatched input '<' expecting '{'
+line 14:15 mismatched input '==' expecting '{'
+line 14:25 token recognition error at: '|'
+line 15:8 mismatched input '=>' expecting '{'
+line 16:8 mismatched input '=>' expecting '{'
+line 17:1 no viable alternative at input '}'
+The resource definition does not exist: File

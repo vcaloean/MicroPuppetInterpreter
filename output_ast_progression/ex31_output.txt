@@ -1,0 +1,117 @@
+program_elements
+   puppet_node - default
+      statements
+         defined_res_decl - a
+            alice
+            attribute - owner
+               alice
+   defined_res_type - a
+      parameter
+         local_variable - owner
+   defined_res_type - b
+      parameter
+         local_variable - variable
+      statements
+         resource
+            alice
+            attribute - password
+               local_variable - variable
+====================
+moving the default node to the end
+program_elements
+   defined_res_type - a
+      parameter
+         local_variable - owner
+   defined_res_type - b
+      parameter
+         local_variable - variable
+      statements
+         resource
+            alice
+            attribute - password
+               local_variable - variable
+====================
+program_elements
+   skip
+   defined_res_type - b
+      parameter
+         local_variable - variable
+      statements
+         resource
+            alice
+            attribute - password
+               local_variable - variable
+====================
+program_elements
+   defined_res_type - b
+      parameter
+         local_variable - variable
+      statements
+         resource
+            alice
+            attribute - password
+               local_variable - variable
+====================
+program_elements
+   skip
+====================
+program_elements
+====================
+program_elements
+   puppet_node - default
+      statements
+         defined_res_decl - a
+            alice
+            attribute - owner
+               alice
+====================
+program_elements
+   scope - ::default
+      statements
+         defined_res_decl - a
+            alice
+            attribute - owner
+               alice
+====================
+program_elements
+   scope - ::default
+      statements
+         scope - (::default a)
+            assignment
+               local_variable - owner
+               alice
+====================
+program_elements
+   scope - ::default
+      statements
+         scope - (::default a)
+            assignment - owner
+               alice
+====================
+program_elements
+   scope - ::default
+      statements
+         scope - (::default a)
+            skip
+====================
+program_elements
+   scope - ::default
+      statements
+         scope - (::default a)
+====================
+program_elements
+   scope - ::default
+      statements
+         skip
+====================
+program_elements
+   scope - ::default
+      statements
+====================
+program_elements
+   scope - ::default
+      skip
+====================
+program_elements
+   scope - ::default
+====================

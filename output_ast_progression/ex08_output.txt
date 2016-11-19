@@ -1,0 +1,36 @@
+program_elements
+   puppet_node - default
+      statements
+         resource
+            alice
+            attribute - password
+               local_variable - variable
+         assignment
+            local_variable - variable
+            12345
+====================
+moving the default node to the end
+program_elements
+====================
+program_elements
+   puppet_node - default
+      statements
+         resource
+            alice
+            attribute - password
+               local_variable - variable
+         assignment
+            local_variable - variable
+            12345
+====================
+program_elements
+   scope - ::default
+      statements
+         resource
+            alice
+            attribute - password
+               local_variable - variable
+         assignment
+            local_variable - variable
+            12345
+====================

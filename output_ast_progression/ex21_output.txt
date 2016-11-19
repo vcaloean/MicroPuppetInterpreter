@@ -1,0 +1,125 @@
+program_elements
+   puppet_node - default
+      statements
+         include - a::b
+   class_def - a
+      statements
+         class_decl
+         resource
+            alice
+            attribute - password
+               12345
+   class_def - a::b
+      statements
+         resource
+            bob
+            attribute - password
+               67890
+====================
+moving the default node to the end
+program_elements
+   class_def - a
+      statements
+         class_decl
+         resource
+            alice
+            attribute - password
+               12345
+   class_def - a::b
+      statements
+         resource
+            bob
+            attribute - password
+               67890
+====================
+program_elements
+   skip
+   class_def - a::b
+      statements
+         resource
+            bob
+            attribute - password
+               67890
+====================
+program_elements
+   class_def - a::b
+      statements
+         resource
+            bob
+            attribute - password
+               67890
+====================
+program_elements
+   skip
+====================
+program_elements
+====================
+program_elements
+   puppet_node - default
+      statements
+         include - a::b
+====================
+program_elements
+   scope - ::default
+      statements
+         include - a::b
+====================
+program_elements
+   scope - ::default
+      statements
+         scope - ::a::b
+            statements
+               resource
+                  bob
+                  attribute - password
+                     67890
+====================
+program_elements
+   scope - ::default
+      statements
+         scope - ::a::b
+            statements
+               resource - bob
+                  attribute - password
+                     67890
+====================
+program_elements
+   scope - ::default
+      statements
+         scope - ::a::b
+            statements
+               skip
+====================
+program_elements
+   scope - ::default
+      statements
+         scope - ::a::b
+            statements
+====================
+program_elements
+   scope - ::default
+      statements
+         scope - ::a::b
+            skip
+====================
+program_elements
+   scope - ::default
+      statements
+         scope - ::a::b
+====================
+program_elements
+   scope - ::default
+      statements
+         skip
+====================
+program_elements
+   scope - ::default
+      statements
+====================
+program_elements
+   scope - ::default
+      skip
+====================
+program_elements
+   scope - ::default
+====================

@@ -1,0 +1,36 @@
+program_elements
+   puppet_node - default
+      statements
+         class_decl
+            attribute - owner
+               alice
+   statements
+      class_decl
+         attribute - owner
+            bob
+   class_def - a
+      parameter
+         local_variable - owner
+         charlie
+      statements
+         resource
+            local_variable - owner
+            attribute - password
+               12345
+====================
+moving the default node to the end
+program_elements
+   statements
+      class_decl
+         attribute - owner
+            bob
+   class_def - a
+      parameter
+         local_variable - owner
+         charlie
+      statements
+         resource
+            local_variable - owner
+            attribute - password
+               12345
+====================

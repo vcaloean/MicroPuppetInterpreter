@@ -1,0 +1,12 @@
+line 12:2 mismatched input '::' expecting '{'
+line 16:1 no viable alternative at input 'define'
+line 19:0 extraneous input '}' expecting {<EOF>, 'case', 'class', 'skip', 'scope', '(', 'define', 'if', 'include', '$', 'node', 'unless', '!', INT, FLOAT, BOOLEAN, RESOURCE_TYPE, IDENTIFIER, STRING_LITERAL}
+Exception in thread "main" java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at AST.AstNode.getChild(AstNode.java:34)
+	at General.Interpreter.smallStepClassDefEval(Interpreter.java:409)
+	at General.Interpreter.smallStepEval(Interpreter.java:113)
+	at General.Interpreter.smallStepSequentialProgramElementsEval(Interpreter.java:875)
+	at General.Interpreter.smallStepEval(Interpreter.java:127)
+	at General.Interpreter.main(Interpreter.java:39)

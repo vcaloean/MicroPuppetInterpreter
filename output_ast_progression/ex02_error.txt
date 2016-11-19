@@ -1,0 +1,7 @@
+line 15:6 token recognition error at: '['
+line 15:1 missing '}' at 'User'
+line 15:14 token recognition error at: ']'
+line 15:7 extraneous input ''alice'' expecting '{'
+line 15:17 no viable alternative at input 'comment'
+line 16:0 extraneous input '}' expecting {<EOF>, ',', 'case', 'class', 'skip', 'scope', '(', 'define', 'if', 'include', '$', 'node', 'unless', '!', INT, FLOAT, BOOLEAN, RESOURCE_TYPE, IDENTIFIER, STRING_LITERAL}
+The resource definition does not exist: User

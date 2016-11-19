@@ -1,0 +1,1 @@
+line 8:13 extraneous input '=' expecting {',', 'case', '}', 'class', 'skip', 'scope', '(', 'if', 'include', '$', 'unless', '?', '!', 'and', 'or', '==', '!=', '<', '>', '<=', '>=', '=~', '!~', 'in', '+', '-', '/', '*', '%', '<<', '>>', INT, FLOAT, BOOLEAN, RESOURCE_TYPE, IDENTIFIER, STRING_LITERAL}

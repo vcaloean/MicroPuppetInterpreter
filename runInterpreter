@@ -1,0 +1,52 @@
+#!/bin/bash
+
+INTTEXT="[filename]\t Run interpreter on a file.\n"
+INTTEXT=$INTTEXT"'all'\t\t Run interpreter on all files in 'examples'.\n"
+INTTEXT=$INTTEXT"Catalogs can be found in 'output_catalog'.\n"
+INTTEXT=$INTTEXT"AST evaluation and errors can be found in 'output_ast_progression'."
+
+PATH_TO_EXAMPLES="examples"
+PATH_TO_OUTPUT="output_ast_progression"
+PATH_TO_CATALOGS="output_catalogs"
+
+if [[ $# -eq 0 ]]; then
+  echo "These are the available options:"
+  echo -e $INTTEXT
+elif [[ $# -eq 1 ]]; then
+  rm -rf $PATH_TO_OUTPUT/
+  mkdir $PATH_TO_OUTPUT/
+
+  rm -rf $PATH_TO_CATALOGS/
+  mkdir $PATH_TO_CATALOGS/
+
+  if [[ $1 == "all" ]]; then    
+    for FILE in "$PATH_TO_EXAMPLES"/*; do
+        FULLNAME="${FILE##*/}"
+        FILENAME="${FULLNAME%%.*}"
+        EXTENSION="${FULLNAME##*.}"
+
+        if [[ $EXTENSION == "pp" ]]; then
+          OUTPUT_FILE="$PATH_TO_OUTPUT"/"$FILENAME"_output.txt
+          ERROR_FILE="$PATH_TO_OUTPUT"/"$FILENAME"_error.txt
+
+          echo "Using $FULLNAME"
+
+          java -jar ./runMe.jar $FILE > "$OUTPUT_FILE" 2> "$ERROR_FILE"
+        fi
+    done;
+  else
+    FILE="$1"
+    FULLNAME="${FILE##*/}"
+    FILENAME="${FULLNAME%%.*}"
+
+    OUTPUT_FILE="$PATH_TO_OUTPUT"/"$FILENAME"_output.txt
+    ERROR_FILE="$PATH_TO_OUTPUT"/"$FILENAME"_error.txt
+
+    rm "$OUTPUT_FILE" "$ERROR_FILE"
+
+    java -jar ./runMe.jar $FILE > "$OUTPUT_FILE" 2> "$ERROR_FILE"
+  fi
+else
+  echo "Incorrect arguments"
+  echo -e $INTTEXT
+fi

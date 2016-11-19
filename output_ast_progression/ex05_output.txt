@@ -1,0 +1,48 @@
+program_elements
+   puppet_node - default
+      statements
+         defined_res_decl - File
+            attribute - owner
+               alice
+         resource
+            file1
+            attribute - mode
+               123
+         resource
+            file2
+            attribute - owner
+               bob
+====================
+moving the default node to the end
+program_elements
+====================
+program_elements
+   puppet_node - default
+      statements
+         defined_res_decl - File
+            attribute - owner
+               alice
+         resource
+            file1
+            attribute - mode
+               123
+         resource
+            file2
+            attribute - owner
+               bob
+====================
+program_elements
+   scope - ::default
+      statements
+         defined_res_decl - File
+            attribute - owner
+               alice
+         resource
+            file1
+            attribute - mode
+               123
+         resource
+            file2
+            attribute - owner
+               bob
+====================

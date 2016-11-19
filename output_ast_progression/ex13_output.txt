@@ -1,0 +1,68 @@
+program_elements
+   statements
+      assignment
+         local_variable - variable
+         12345
+   puppet_node - default
+      statements
+         qualified_variable - ::variable
+         67890
+====================
+program_elements
+   statements
+      assignment - variable
+         12345
+   puppet_node - default
+      statements
+         qualified_variable - ::variable
+         67890
+====================
+program_elements
+   statements
+      skip
+   puppet_node - default
+      statements
+         qualified_variable - ::variable
+         67890
+====================
+program_elements
+   statements
+   puppet_node - default
+      statements
+         qualified_variable - ::variable
+         67890
+====================
+program_elements
+   skip
+   puppet_node - default
+      statements
+         qualified_variable - ::variable
+         67890
+====================
+program_elements
+   puppet_node - default
+      statements
+         qualified_variable - ::variable
+         67890
+====================
+moving the default node to the end
+program_elements
+====================
+program_elements
+   puppet_node - default
+      statements
+         qualified_variable - ::variable
+         67890
+====================
+program_elements
+   scope - ::default
+      statements
+         qualified_variable - ::variable
+         67890
+====================
+program_elements
+   scope - ::default
+      statements
+         12345
+         67890
+====================

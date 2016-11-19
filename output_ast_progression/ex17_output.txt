@@ -1,0 +1,278 @@
+program_elements
+   puppet_node - default
+      statements
+         include - a
+   class_def - a
+      parameter
+         local_variable - variable
+         12345
+      inherits - b
+      statements
+         resource
+            local_variable - owner
+            attribute - password
+               local_variable - variable
+   class_def - b
+      statements
+         assignment
+            local_variable - owner
+            alice
+====================
+moving the default node to the end
+program_elements
+   class_def - a
+      parameter
+         local_variable - variable
+         12345
+      inherits - b
+      statements
+         resource
+            local_variable - owner
+            attribute - password
+               local_variable - variable
+   class_def - b
+      statements
+         assignment
+            local_variable - owner
+            alice
+====================
+program_elements
+   skip
+   class_def - b
+      statements
+         assignment
+            local_variable - owner
+            alice
+====================
+program_elements
+   class_def - b
+      statements
+         assignment
+            local_variable - owner
+            alice
+====================
+program_elements
+   skip
+====================
+program_elements
+====================
+program_elements
+   puppet_node - default
+      statements
+         include - a
+====================
+program_elements
+   scope - ::default
+      statements
+         include - a
+====================
+program_elements
+   scope - ::default
+      statements
+         statements
+            include - b
+            include - a
+====================
+program_elements
+   scope - ::default
+      statements
+         statements
+            scope - ::b
+               statements
+                  assignment
+                     local_variable - owner
+                     alice
+            include - a
+====================
+program_elements
+   scope - ::default
+      statements
+         statements
+            scope - ::b
+               statements
+                  assignment - owner
+                     alice
+            include - a
+====================
+program_elements
+   scope - ::default
+      statements
+         statements
+            scope - ::b
+               statements
+                  skip
+            include - a
+====================
+program_elements
+   scope - ::default
+      statements
+         statements
+            scope - ::b
+               statements
+            include - a
+====================
+program_elements
+   scope - ::default
+      statements
+         statements
+            scope - ::b
+               skip
+            include - a
+====================
+program_elements
+   scope - ::default
+      statements
+         statements
+            scope - ::b
+            include - a
+====================
+program_elements
+   scope - ::default
+      statements
+         statements
+            skip
+            include - a
+====================
+program_elements
+   scope - ::default
+      statements
+         statements
+            include - a
+====================
+program_elements
+   scope - ::default
+      statements
+         statements
+            scope - ::a
+               assignment
+                  local_variable - variable
+                  12345
+               statements
+                  resource
+                     local_variable - owner
+                     attribute - password
+                        local_variable - variable
+====================
+program_elements
+   scope - ::default
+      statements
+         statements
+            scope - ::a
+               assignment - variable
+                  12345
+               statements
+                  resource
+                     local_variable - owner
+                     attribute - password
+                        local_variable - variable
+====================
+program_elements
+   scope - ::default
+      statements
+         statements
+            scope - ::a
+               skip
+               statements
+                  resource
+                     local_variable - owner
+                     attribute - password
+                        local_variable - variable
+====================
+program_elements
+   scope - ::default
+      statements
+         statements
+            scope - ::a
+               statements
+                  resource
+                     local_variable - owner
+                     attribute - password
+                        local_variable - variable
+====================
+program_elements
+   scope - ::default
+      statements
+         statements
+            scope - ::a
+               statements
+                  resource
+                     alice
+                     attribute - password
+                        local_variable - variable
+====================
+program_elements
+   scope - ::default
+      statements
+         statements
+            scope - ::a
+               statements
+                  resource
+                     alice
+                     attribute - password
+                        12345
+====================
+program_elements
+   scope - ::default
+      statements
+         statements
+            scope - ::a
+               statements
+                  resource - alice
+                     attribute - password
+                        12345
+====================
+program_elements
+   scope - ::default
+      statements
+         statements
+            scope - ::a
+               statements
+                  skip
+====================
+program_elements
+   scope - ::default
+      statements
+         statements
+            scope - ::a
+               statements
+====================
+program_elements
+   scope - ::default
+      statements
+         statements
+            scope - ::a
+               skip
+====================
+program_elements
+   scope - ::default
+      statements
+         statements
+            scope - ::a
+====================
+program_elements
+   scope - ::default
+      statements
+         statements
+            skip
+====================
+program_elements
+   scope - ::default
+      statements
+         statements
+====================
+program_elements
+   scope - ::default
+      statements
+         skip
+====================
+program_elements
+   scope - ::default
+      statements
+====================
+program_elements
+   scope - ::default
+      skip
+====================
+program_elements
+   scope - ::default
+====================

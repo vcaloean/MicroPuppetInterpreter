@@ -1,0 +1,2 @@
+line 10:1 no viable alternative at input 'define'
+line 13:0 extraneous input '}' expecting {<EOF>, 'case', 'class', 'skip', 'scope', '(', 'define', 'if', 'include', '$', 'node', 'unless', '!', INT, FLOAT, BOOLEAN, RESOURCE_TYPE, IDENTIFIER, STRING_LITERAL}

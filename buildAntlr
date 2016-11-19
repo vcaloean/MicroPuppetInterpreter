@@ -1,0 +1,14 @@
+#!/bin/bash
+
+rm -rf parser_classes/
+rm source/ANTLR/*
+
+mkdir parser_classes/
+
+cd grammar
+
+java -cp ../antlr_jar/antlr-4.5-complete.jar org.antlr.v4.Tool -visitor -package ANTLR -o ../source/ANTLR/ PuppetGrammar.g4
+
+cd ..
+
+javac -cp antlr_jar/antlr-4.5-complete.jar -d parser_classes/ source/ANTLR/*.java

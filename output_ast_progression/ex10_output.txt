@@ -1,0 +1,109 @@
+program_elements
+   statements
+      assignment
+         local_variable - variable
+         12345
+   puppet_node - default
+      statements
+         resource
+            alice
+            attribute - password
+               local_variable - variable
+====================
+program_elements
+   statements
+      assignment - variable
+         12345
+   puppet_node - default
+      statements
+         resource
+            alice
+            attribute - password
+               local_variable - variable
+====================
+program_elements
+   statements
+      skip
+   puppet_node - default
+      statements
+         resource
+            alice
+            attribute - password
+               local_variable - variable
+====================
+program_elements
+   statements
+   puppet_node - default
+      statements
+         resource
+            alice
+            attribute - password
+               local_variable - variable
+====================
+program_elements
+   skip
+   puppet_node - default
+      statements
+         resource
+            alice
+            attribute - password
+               local_variable - variable
+====================
+program_elements
+   puppet_node - default
+      statements
+         resource
+            alice
+            attribute - password
+               local_variable - variable
+====================
+moving the default node to the end
+program_elements
+====================
+program_elements
+   puppet_node - default
+      statements
+         resource
+            alice
+            attribute - password
+               local_variable - variable
+====================
+program_elements
+   scope - ::default
+      statements
+         resource
+            alice
+            attribute - password
+               local_variable - variable
+====================
+program_elements
+   scope - ::default
+      statements
+         resource
+            alice
+            attribute - password
+               12345
+====================
+program_elements
+   scope - ::default
+      statements
+         resource - alice
+            attribute - password
+               12345
+====================
+program_elements
+   scope - ::default
+      statements
+         skip
+====================
+program_elements
+   scope - ::default
+      statements
+====================
+program_elements
+   scope - ::default
+      skip
+====================
+program_elements
+   scope - ::default
+====================

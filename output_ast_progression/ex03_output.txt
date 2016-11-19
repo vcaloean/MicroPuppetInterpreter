@@ -1,0 +1,39 @@
+program_elements
+   puppet_node - default
+      statements
+         resource
+            file
+            attribute - owner
+               alice
+   statements
+      defined_res_decl - File
+   statements
+      defined_res_decl - title
+   statements
+      binop - >
+         file
+   statements
+      defined_res_decl - owner
+   statements
+      bob
+      defined_res_decl - group
+   statements
+      the group
+====================
+moving the default node to the end
+program_elements
+   statements
+      defined_res_decl - File
+   statements
+      defined_res_decl - title
+   statements
+      binop - >
+         file
+   statements
+      defined_res_decl - owner
+   statements
+      bob
+      defined_res_decl - group
+   statements
+      the group
+====================

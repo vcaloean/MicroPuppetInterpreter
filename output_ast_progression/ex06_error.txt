@@ -1,0 +1,1 @@
+The resource of type user and name alice already exists

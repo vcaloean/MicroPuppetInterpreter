@@ -1,0 +1,43 @@
+#!/bin/bash
+
+ASTTEXT="[filename]\t Generate a Parse Tree in gui form for a file.\n"
+ASTTEXT=$ASTTEXT"'all'\t\t Generate Parse Trees in text form for all files in 'examples'. View 'output_parse_trees'."
+
+PATH_TO_EXAMPLES="examples"
+PATH_TO_OUTPUT="output_parse_trees"
+
+PATHSEP=":" 
+if [[ $OSTYPE == "cygwin" ]] ; then
+PATHSEP=";" 
+fi
+
+if [[ $# -eq 0 ]]; then
+  echo "These are the available options:"
+  echo -e $ASTTEXT
+elif [[ $# -eq 1 ]]; then
+  if [[ $1 == "all" ]]; then
+    rm -rf $PATH_TO_OUTPUT/
+    mkdir $PATH_TO_OUTPUT/
+
+    for FILE in "$PATH_TO_EXAMPLES"/*; do
+        FULLNAME="${FILE##*/}"
+        FILENAME="${FULLNAME%%.*}"
+        EXTENSION="${FULLNAME##*.}"
+
+        if [[ $EXTENSION == "pp" ]]; then
+          OUTPUT_FILE="$PATH_TO_OUTPUT"/"$FILENAME"_parse_tree.txt
+
+          echo "Using $FULLNAME"
+
+          java -cp "antlr_jar/antlr-4.5-complete.jar"$PATHSEP"parser_classes" org.antlr.v4.runtime.misc.TestRig ANTLR.PuppetGrammar puppetProgram -tree $FILE > $OUTPUT_FILE
+        fi
+    done
+  else
+    FILE="$1"
+
+    java -cp "antlr_jar/antlr-4.5-complete.jar"$PATHSEP"parser_classes" org.antlr.v4.runtime.misc.TestRig ANTLR.PuppetGrammar puppetProgram -gui $FILE
+  fi
+else
+  echo "Incorrect arguments"
+  echo -e $ASTTEXT
+fi

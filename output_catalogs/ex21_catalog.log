@@ -1,0 +1,7 @@
+{
+	"type": "User",
+	"title": "bob",
+	"parameters": {
+		"password": 67890
+	}
+}

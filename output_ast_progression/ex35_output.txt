@@ -1,0 +1,214 @@
+program_elements
+   puppet_node - a
+      statements
+         resource
+            alice
+            attribute - password
+               12345
+   puppet_node - b
+      statements
+         resource
+            bob
+            attribute - password
+               12345
+   puppet_node - c
+      statements
+         resource
+            bob
+            attribute - password
+               12345
+   puppet_node - d
+      statements
+         resource
+            bob
+            attribute - password
+               12345
+   puppet_node - default
+      statements
+         resource
+            charlie
+            attribute - password
+               12345
+====================
+program_elements
+   skip
+   puppet_node - b
+      statements
+         resource
+            bob
+            attribute - password
+               12345
+   puppet_node - c
+      statements
+         resource
+            bob
+            attribute - password
+               12345
+   puppet_node - d
+      statements
+         resource
+            bob
+            attribute - password
+               12345
+   puppet_node - default
+      statements
+         resource
+            charlie
+            attribute - password
+               12345
+====================
+program_elements
+   puppet_node - b
+      statements
+         resource
+            bob
+            attribute - password
+               12345
+   puppet_node - c
+      statements
+         resource
+            bob
+            attribute - password
+               12345
+   puppet_node - d
+      statements
+         resource
+            bob
+            attribute - password
+               12345
+   puppet_node - default
+      statements
+         resource
+            charlie
+            attribute - password
+               12345
+====================
+program_elements
+   skip
+   puppet_node - c
+      statements
+         resource
+            bob
+            attribute - password
+               12345
+   puppet_node - d
+      statements
+         resource
+            bob
+            attribute - password
+               12345
+   puppet_node - default
+      statements
+         resource
+            charlie
+            attribute - password
+               12345
+====================
+program_elements
+   puppet_node - c
+      statements
+         resource
+            bob
+            attribute - password
+               12345
+   puppet_node - d
+      statements
+         resource
+            bob
+            attribute - password
+               12345
+   puppet_node - default
+      statements
+         resource
+            charlie
+            attribute - password
+               12345
+====================
+program_elements
+   skip
+   puppet_node - d
+      statements
+         resource
+            bob
+            attribute - password
+               12345
+   puppet_node - default
+      statements
+         resource
+            charlie
+            attribute - password
+               12345
+====================
+program_elements
+   puppet_node - d
+      statements
+         resource
+            bob
+            attribute - password
+               12345
+   puppet_node - default
+      statements
+         resource
+            charlie
+            attribute - password
+               12345
+====================
+program_elements
+   skip
+   puppet_node - default
+      statements
+         resource
+            charlie
+            attribute - password
+               12345
+====================
+program_elements
+   puppet_node - default
+      statements
+         resource
+            charlie
+            attribute - password
+               12345
+====================
+moving the default node to the end
+program_elements
+====================
+program_elements
+   puppet_node - default
+      statements
+         resource
+            charlie
+            attribute - password
+               12345
+====================
+program_elements
+   scope - ::default
+      statements
+         resource
+            charlie
+            attribute - password
+               12345
+====================
+program_elements
+   scope - ::default
+      statements
+         resource - charlie
+            attribute - password
+               12345
+====================
+program_elements
+   scope - ::default
+      statements
+         skip
+====================
+program_elements
+   scope - ::default
+      statements
+====================
+program_elements
+   scope - ::default
+      skip
+====================
+program_elements
+   scope - ::default
+====================

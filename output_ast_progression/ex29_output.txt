@@ -1,0 +1,135 @@
+program_elements
+   puppet_node - default
+      statements
+         defined_res_decl - a
+            alice
+            attribute - variable
+               12345
+   defined_res_type - a
+      parameter
+         local_variable - variable
+         67890
+      statements
+         resource
+            alice
+            attribute - password
+               local_variable - variable
+====================
+moving the default node to the end
+program_elements
+   defined_res_type - a
+      parameter
+         local_variable - variable
+         67890
+      statements
+         resource
+            alice
+            attribute - password
+               local_variable - variable
+====================
+program_elements
+   skip
+====================
+program_elements
+====================
+program_elements
+   puppet_node - default
+      statements
+         defined_res_decl - a
+            alice
+            attribute - variable
+               12345
+====================
+program_elements
+   scope - ::default
+      statements
+         defined_res_decl - a
+            alice
+            attribute - variable
+               12345
+====================
+program_elements
+   scope - ::default
+      statements
+         scope - (::default a)
+            assignment
+               local_variable - variable
+               12345
+            statements
+               resource
+                  alice
+                  attribute - password
+                     local_variable - variable
+====================
+program_elements
+   scope - ::default
+      statements
+         scope - (::default a)
+            assignment - variable
+               12345
+            statements
+               resource
+                  alice
+                  attribute - password
+                     local_variable - variable
+====================
+program_elements
+   scope - ::default
+      statements
+         scope - (::default a)
+            skip
+            statements
+               resource
+                  alice
+                  attribute - password
+                     local_variable - variable
+====================
+program_elements
+   scope - ::default
+      statements
+         scope - (::default a)
+            statements
+               resource
+                  alice
+                  attribute - password
+                     local_variable - variable
+====================
+attribute - password
+   12345
+====================
+resource - alice
+   attribute - password
+      12345
+====================
+statements
+   skip
+====================
+statements
+====================
+program_elements
+   scope - ::default
+      statements
+         scope - (::default a)
+            skip
+====================
+program_elements
+   scope - ::default
+      statements
+         scope - (::default a)
+====================
+program_elements
+   scope - ::default
+      statements
+         skip
+====================
+program_elements
+   scope - ::default
+      statements
+====================
+program_elements
+   scope - ::default
+      skip
+====================
+program_elements
+   scope - ::default
+====================

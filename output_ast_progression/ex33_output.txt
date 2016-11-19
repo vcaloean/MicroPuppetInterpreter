@@ -1,0 +1,42 @@
+program_elements
+   puppet_node - default
+      statements
+         defined_res_decl - a
+         defined_res_decl - b
+            alice
+            attribute - owner
+               alice
+   statements
+      defined_res_decl - a
+      defined_res_decl - b
+         bob
+         attribute - owner
+            bob
+   class_def - a
+   defined_res_type - b
+      parameter
+         local_variable - owner
+      statements
+         resource
+            local_variable - owner
+            attribute - password
+               12345
+====================
+moving the default node to the end
+program_elements
+   statements
+      defined_res_decl - a
+      defined_res_decl - b
+         bob
+         attribute - owner
+            bob
+   class_def - a
+   defined_res_type - b
+      parameter
+         local_variable - owner
+      statements
+         resource
+            local_variable - owner
+            attribute - password
+               12345
+====================

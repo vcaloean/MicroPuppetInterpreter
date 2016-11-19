@@ -1,0 +1,7 @@
+line 12:13 token recognition error at: '['
+line 12:9 mismatched input 'User' expecting '{'
+line 12:21 token recognition error at: ']'
+line 13:1 token recognition error at: '@'
+line 12:14 missing '{' at ''alice''
+line 14:0 extraneous input '}' expecting {<EOF>, ',', 'case', 'class', 'skip', 'scope', '(', 'define', 'if', 'include', '$', 'node', 'unless', '!', INT, FLOAT, BOOLEAN, RESOURCE_TYPE, IDENTIFIER, STRING_LITERAL}
+The resource definition does not exist: User

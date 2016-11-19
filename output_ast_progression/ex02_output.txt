@@ -1,0 +1,19 @@
+program_elements
+   puppet_node - default
+      statements
+         resource
+            alice
+            attribute - password
+               12345
+   statements
+      defined_res_decl - User
+         attribute - comment
+            comment
+====================
+moving the default node to the end
+program_elements
+   statements
+      defined_res_decl - User
+         attribute - comment
+            comment
+====================

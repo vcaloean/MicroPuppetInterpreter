@@ -1,0 +1,3 @@
+line 23:7 extraneous input 'b' expecting '{'
+line 24:2 no viable alternative at input 'user'
+line 26:0 extraneous input '}' expecting {<EOF>, 'case', 'class', 'skip', 'scope', '(', 'define', 'if', 'include', '$', 'node', 'unless', '!', INT, FLOAT, BOOLEAN, RESOURCE_TYPE, IDENTIFIER, STRING_LITERAL}

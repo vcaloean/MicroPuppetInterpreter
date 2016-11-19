@@ -1,0 +1,49 @@
+program_elements
+   puppet_node - default
+      statements
+         include - a
+   class_def - a
+      statements
+         resource
+            alice
+            attribute - password
+               12345
+   class_def - a
+      statements
+         resource
+            bob
+            attribute - password
+               67890
+====================
+moving the default node to the end
+program_elements
+   class_def - a
+      statements
+         resource
+            alice
+            attribute - password
+               12345
+   class_def - a
+      statements
+         resource
+            bob
+            attribute - password
+               67890
+====================
+program_elements
+   skip
+   class_def - a
+      statements
+         resource
+            bob
+            attribute - password
+               67890
+====================
+program_elements
+   class_def - a
+      statements
+         resource
+            bob
+            attribute - password
+               67890
+====================
