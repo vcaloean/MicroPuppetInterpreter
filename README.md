@@ -2,9 +2,11 @@ This is an Interpreter for the language of micro-Puppet.
 
 For more information and to view syntactic and semantic rules, please visit https://arxiv.org/abs/1608.04999
 
+# How To Run
+
 First, run "./buildAntlr" to create the relevent files.
 
---- ANTLR ---
+## ANTLR
 To run ANTLR on a puppet example, there are two options:
 
 Option 1: (Single file - Image output)
@@ -13,7 +15,7 @@ Running "./runAntlr [relative/path/to/file]" will result in an image of the resu
 Option 2: (All files in examples - Text output)
 Running "./runAntlr all" will result in all of the files in "examples/" to be used by ANTLR and the resulting parse trees will be output to the directory "output_ast_progression/" in a lisp-like format.
 
---- Interpreter ---
+## Interpreter
 To run the Interpreter on a puppet example, there are two options:
 
 Option 1: (Single file)
